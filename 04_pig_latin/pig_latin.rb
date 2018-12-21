@@ -36,7 +36,6 @@ end
 # Rule 3 => word starts with two consonants = cherry => erry + ch + ay
 def starts_with_two_cons (str)
     return str + str.slice!(0,2) + 'ay'
-
 end
 
 # Rule 4 => word starts with three consonants = three => ee + thr + ay
@@ -52,39 +51,10 @@ end
 # Rule 6 => counts 'qu' as a consonant even when it's preceded by a consonant" => square = are + squ + ay
 # Must account for other cases too Rule 2
 def has_qu_sound(str)
-    #if !!str[0].match(/^[bcdfghjklmnpqrstvxz]/)
+
     return str + str.slice!(0,2) + 'ay'
-#end
 end
 
 
 
 
-translate("apple banana cherry three school square orange yellow")
-#puts translate("the quick brown fox story")
-#puts starts_with_vocal("apple")
-#puts starts_with_cons(["banana"])
-
-
-# def translate (a_string)
-#     collector = 
-#     a_string.split(" ").each do |wrd|
-#         if !!wrd.match(/^[aoeui]/) 
-#             puts starts_with_vocal(wrd)
-#         elsif !!wrd.match(/^[bcdfghjklmnpqrstvxyz]/) and unless !!wrd.match(/^[bcdfghjklmnpqrstvxyz]{2}/)
-#             then puts starts_with_cons(wrd)
-#         end
-#         elsif !!wrd.match(/^[bcdfghjklmnpqrstvxyz]{2}/) and unless !!wrd.match(/^[bcdfghjklmnpqrstvxyz]{3}/) || !!wrd.match(/qu/) # negate qu sounds
-#             then puts starts_with_two_cons(wrd)
-#         end
-#         elsif !!wrd.match(/^[bcdfghjklmnpqrstvxyz]{3}/) and unless !!wrd.match(/sch/)
-#             puts starts_with_three_cons(wrd)
-#         end
-#         elsif !!wrd.match(/sch/)
-#             puts has_sch_sound(wrd)
-#         elsif !!wrd.match(/qu/)
-#             puts has_qu_sound(wrd)
-        
-#     end
-# end
-# end
